@@ -50,17 +50,24 @@ class CategoryGridView extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  ClipRRect(
-                      borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(8),
-                        topRight: Radius.circular(8),
-                      ),
-                      child: Image.asset(
-                        '${categoryGrid.elementAt(index)['image']}',
-                        fit: BoxFit.cover,
-                        width: double.infinity,
-                        height: 260,
-                      )),
+                  GestureDetector(
+                    onTap: () {
+                      // todo
+                      Navigator.pushReplacementNamed(context, 'detail');
+                    },
+                    child: ClipRRect(
+                        borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(8),
+                          topRight: Radius.circular(8),
+                        ),
+                        child: Image.asset(
+                          '${categoryGrid.elementAt(index)['image']}',
+                          fit: BoxFit.cover,
+                          width: double.infinity,
+                          height: 260,
+                        )),
+                  ),
+                  // todo
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(

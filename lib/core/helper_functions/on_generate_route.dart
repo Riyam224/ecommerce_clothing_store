@@ -12,7 +12,7 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const DetailView());
 
     case CartView.routeName:
-      return MaterialPageRoute(builder: (context) => const CartView());
+      return MaterialPageRoute(builder: (context) => CartView());
     default:
       return MaterialPageRoute(builder: (context) => const Scaffold());
   }
